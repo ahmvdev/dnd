@@ -1,6 +1,6 @@
 import sequelize from "../config/db.js"
 
-const createRandomRaceView = async () => {
+const RandomRaceView = async () => {
     try {
         await sequelize.query(`
         CREATE OR REPLACE VIEW random_race AS
@@ -14,4 +14,4 @@ const createRandomRaceView = async () => {
     }
 };
 
-export default createRandomRaceView;
+export default RandomRaceView;

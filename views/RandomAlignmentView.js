@@ -1,6 +1,6 @@
 import sequelize from "../config/db.js"
 
-const createRandomAlignmentView = async () => {
+const RandomAlignmentView = async () => {
     try {
         await sequelize.query(`
       CREATE OR REPLACE VIEW random_alignment AS
@@ -15,4 +15,4 @@ const createRandomAlignmentView = async () => {
     }
 };
 
-export default createRandomAlignmentView;
+export default RandomAlignmentView;
