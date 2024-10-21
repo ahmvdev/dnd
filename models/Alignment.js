@@ -1,5 +1,5 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/db');
+import { DataTypes } from "sequelize";
+import sequelize from "../config/db.js"
 
 const Alignment = sequelize.define('Alignment', {
     alignment_id: {
@@ -19,4 +19,4 @@ const Alignment = sequelize.define('Alignment', {
     timestamps: false,
 });
 
-module.exports = Alignment;
+export default Alignment;

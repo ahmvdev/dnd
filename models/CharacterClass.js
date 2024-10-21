@@ -1,5 +1,5 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/db');
+import { DataTypes } from "sequelize";
+import sequelize from "../config/db.js"
 
 const CharacterClass = sequelize.define('CharacterClass', {
     character_class_id: {
@@ -19,4 +19,4 @@ const CharacterClass = sequelize.define('CharacterClass', {
     timestamps: false,
 });
 
-module.exports = CharacterClass;
+export default CharacterClass;

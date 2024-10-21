@@ -19,4 +19,4 @@ const LastName = sequelize.define('LastName', {
     timestamps: false,
 });
 
-module.exports = LastName;
+export default LastName;
