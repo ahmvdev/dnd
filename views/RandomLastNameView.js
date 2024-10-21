@@ -14,4 +14,4 @@ const RandomLastNameView = async () => {
     }
 };
 
-export default RandomLastNameView;
+export default RandomLastNameView; 
