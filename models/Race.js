@@ -1,6 +1,5 @@
-import { DataTypes } from "sequelize";
 import sequelize from "../config/db.js"
-
+import { DataTypes } from "sequelize";
 
 const Race = sequelize.define('Race', {
     race_id: {
