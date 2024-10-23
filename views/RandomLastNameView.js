@@ -9,6 +9,7 @@ const RandomLastNameView = async () => {
         ORDER BY RAND()
         LIMIT 1
       `);
+        console.log('view random_lastname created or replaced successfully.');
     } catch (error) {
         console.error('error creating or replacing view random_last_name:', error);
     }

@@ -15,7 +15,6 @@ const Alignment = sequelize.define('Alignment', {
     },
 }, {
     tableName: 'alignment',
-    schema: 'dnd_characters',
     timestamps: false,
 });
 

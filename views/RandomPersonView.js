@@ -1,8 +1,8 @@
 import sequelize from "../config/db.js"
 
 const RandomPersonView = async () => {
-    try {
-        await sequelize.query(`
+  try {
+    await sequelize.query(`
       CREATE OR REPLACE VIEW random_person AS
       SELECT 
         random_first_name.name AS first_name,
@@ -24,9 +24,11 @@ const RandomPersonView = async () => {
       JOIN 
         random_alignment
     `);
-    } catch (error) {
-        console.error('error creating or replacing view random_person:', error);
-    }
+    console.log('view random_person created or replaced successfully.');
+
+  } catch (error) {
+    console.error('error creating or replacing view random_person:', error);
+  }
 };
 
 export default RandomPersonView;

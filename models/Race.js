@@ -18,7 +18,6 @@ const Race = sequelize.define('Race', {
     },
 }, {
     tableName: 'race',
-    schema: 'dnd_characters',
     timestamps: false,
 });
 

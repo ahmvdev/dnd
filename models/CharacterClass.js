@@ -15,7 +15,6 @@ const CharacterClass = sequelize.define('CharacterClass', {
     },
 }, {
     tableName: 'character_class',
-    schema: 'dnd_characters',
     timestamps: false,
 });
 

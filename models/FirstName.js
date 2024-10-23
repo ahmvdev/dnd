@@ -21,7 +21,6 @@ const FirstName = sequelize.define('FirstName', {
     },
 }, {
     tableName: 'first_name',
-    schema: 'dnd_characters',
     timestamps: false,
 });
 
