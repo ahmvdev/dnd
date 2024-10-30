@@ -3,7 +3,7 @@ import sequelize from "../config/db.js"
 const RandomPersonView = async () => {
   try {
     await sequelize.query(`
-      CREATE OR REPLACE VIEW random_person AS
+      CREATE VIEW IF NOT EXISTS random_person AS
       SELECT 
         random_first_name.name AS first_name,
         random_last_name.name AS last_name,
@@ -24,7 +24,7 @@ const RandomPersonView = async () => {
       JOIN 
         random_alignment
     `);
-    console.log('view random_person created or replaced successfully.');
+    console.log('view random_person created if doesnt exist.');
 
   } catch (error) {
     console.error('error creating or replacing view random_person:', error);

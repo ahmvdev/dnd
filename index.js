@@ -1,10 +1,5 @@
 import express from 'express';
 import sequelize from './config/db.js';
-import Alignment from './models/Alignment.js';
-import CharacterClass from './models/CharacterClass.js';
-import FirstName from './models/FirstName.js';
-import LastName from './models/LastName.js';
-import Race from './models/Race.js';
 import RandomAlignmentView from './views/RandomAlignmentView.js';
 import RandomClassView from './views/RandomClassView.js';
 import RandomFirstNameView from './views/RandomFirstNameView.js';
@@ -38,16 +33,16 @@ sequelize.authenticate()
         console.error('Unable to connect to the database:', error);
     });
 
-app.get('/random-alignment', async (req, res) => {
+
+app.get('/random-person', async (req, res) => {
     try {
-        const [result] = await sequelize.query(`SELECT * FROM random_alignment`);
+        const [result] = await sequelize.query(`SELECT * FROM random_person`);
         res.json(result);
     } catch (error) {
-        console.error('Error fetching random alignment:', error);
+        console.error('Error fetching random person:', error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
-
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
