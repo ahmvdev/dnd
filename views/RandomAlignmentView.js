@@ -2,8 +2,9 @@ import sequelize from "../config/db.js"
 
 const RandomAlignmentView = async () => {
     try {
+        await sequelize.query(`DROP VIEW IF EXISTS random_alignment`);
         await sequelize.query(`
-      CREATE VIEW IF NOT EXISTS random_alignment AS
+      CREATE VIEW random_alignment AS
       SELECT name 
       FROM alignment
       ORDER BY RAND()

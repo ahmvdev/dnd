@@ -2,8 +2,9 @@ import sequelize from "../config/db.js"
 
 const RandomLastNameView = async () => {
     try {
+        await sequelize.query(`DROP VIEW IF EXISTS random_last_name`);
         await sequelize.query(`
-        CREATE VIEW IF NOT EXISTS random_last_name AS
+        CREATE VIEW random_last_name AS
         SELECT last_name_id, name
         FROM last_name
         ORDER BY RAND()

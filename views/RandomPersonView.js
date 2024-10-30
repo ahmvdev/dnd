@@ -2,8 +2,9 @@ import sequelize from "../config/db.js"
 
 const RandomPersonView = async () => {
   try {
+    await sequelize.query(`DROP VIEW IF EXISTS random_person`);
     await sequelize.query(`
-      CREATE VIEW IF NOT EXISTS random_person AS
+      CREATE VIEW random_person AS
       SELECT 
         random_first_name.name AS first_name,
         random_last_name.name AS last_name,
